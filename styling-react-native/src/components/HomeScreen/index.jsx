@@ -5,50 +5,73 @@ import { StyleSheet } from 'react-native';
 import { defaultState } from '../../config';
 import { ConcertListItem } from './ConcertListItem';
 
+export const HomeScreen = ({ navigation }) => {
 
-export const HomeScreen = ({navigation})=>{
+	function interactionHandler(item)
+	{
 
-    return (
-       <View style={styles.container}>
+navigation.navigate("Details",{item});
+	}
 
-				  <ScrollView>
 
-                	<SectionList
-	                    sections={defaultState} 
-						renderItem={({item}) => (
-						
-							<ConcertListItem item={item} navigation={navigation}/> 
-						
+
+
+	return (
+		<View style={styles.coverer}>
+			<View style={styles.homebody}>
+				<ScrollView>
+
+					<SectionList
+						sections={defaultState}
+						renderItem={({ item }) => (
+
+							<ConcertListItem item={item} navigation={navigation}  handleInteraction = {interactionHandler} />
+
 						)}
-                  		renderSectionHeader={({section}) => (
+						renderSectionHeader={({ section }) => (
 
-                      		<Text style = {styles.sectionHeader}>
-                        		{section.title}
-                      		</Text>
+							<Text style={styles.sectionHeader}>
+								{section.title}
+							</Text>
 
-						)}/>
+						)} />
 
-            	</ScrollView>
-      
-				<Text>
+				</ScrollView>
+			</View>
 
-              		(C)2020 Globoticket
+			<Text style={styles.homefooter}>
 
-        		</Text>
+				(C)2020 Globoticket
+
+			</Text>
 
 		</View>
 	)
-	
+
 }
 const styles = StyleSheet.create({
 
-	container: {
+	coverer: {
 
 		backgroundColor: "orange",
-		height: 470
+		flex: 1
+		//height: 470
 
 	},
+	homebody: {
 
+		flex: 15
+	},
+	homefooter: {
+
+		flex: 1,
+		alignSelf: "stretch",
+		justifyContent: "flex-end",
+		borderTopColor: "gray",
+		borderTopWidth: StyleSheet.hairlineWidth,
+		bordergroundColor: "steelblue",
+
+	},
 	sectionHeader: {
 		paddingTop: 2,
 		paddingBottom: 2,
@@ -57,7 +80,7 @@ const styles = StyleSheet.create({
 		fontWeight: "bold",
 		backgroundColor: "red",
 		borderBottumColor: "blue",
-        borderBottomWidth: StyleSheet.hairlineWidth
+		borderBottomWidth: StyleSheet.hairlineWidth
 
 	}
 })

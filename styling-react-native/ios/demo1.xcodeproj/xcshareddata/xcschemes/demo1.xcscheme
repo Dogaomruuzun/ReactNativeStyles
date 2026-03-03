@@ -17,7 +17,7 @@
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
                BuildableName = "demo1.app"
                BlueprintName = "demo1"
-               ReferencedContainer = "container:demo1.xcodeproj">
+               Referencedcoverer = "coverer:demo1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
                BuildableName = "demo1Tests.xctest"
                BlueprintName = "demo1Tests"
-               ReferencedContainer = "container:demo1.xcodeproj">
+               Referencedcoverer = "coverer:demo1.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,7 +57,7 @@
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "demo1.app"
             BlueprintName = "demo1"
-            ReferencedContainer = "container:demo1.xcodeproj">
+            Referencedcoverer = "coverer:demo1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -74,7 +74,7 @@
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "demo1.app"
             BlueprintName = "demo1"
-            ReferencedContainer = "container:demo1.xcodeproj">
+            Referencedcoverer = "coverer:demo1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
